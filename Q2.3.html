@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>New Year</title>
+    </head>
+    <body>
+
+        <h3>New Year </h3>
+        <button onclick="new_year()" >Display Christmas</button>
+            <script>
+
+        function new_year()
+        {   
+            var today=new Date();
+            var nyear=new Date(today.getFullYear(), 11, 31);
+            if (today.getMonth()==12 && today.getDate()>31) 
+            {
+                nyear.setFullYear(cmas.getFullYear()+1); 
+            }  
+            var one_day=1000*60*60*24;
+           // document.write('<p id="font">'+Math.ceil((nyear.getTime()-today.getTime())/(one_day))+" days left until Christmas!"+'<p>');
+            alert('<p id="font">'+Math.ceil((nyear.getTime()-today.getTime())/(one_day))+" days left until New Year!"+'<p>');
+        }
+
+        function yashnew()
+        {
+            var d  = new Date("12/31/"+new Date().getFullYear());
+            var today = new Date();
+            var tleft = d - today;
+            alert("TIME LEFT FOR NEW YEAR " + Math.floor(tleft/(1000*60*60*24)) + " DAYS");
+        }
+
+        yashnew();
+    </script>
+        
+    </body>
+</html>
