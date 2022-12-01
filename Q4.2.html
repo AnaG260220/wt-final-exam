@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Uppercase
+        </title>
+    </head>
+    <body>
+        <script>
+            function uppercase()
+            {
+                var str = prompt("Enter the String: ");
+                var spl = str.split(' ');
+                var newstr = [];
+
+                for(var i=0;i<spl.length;i++)
+                {
+                    newstr.push(spl[i].charAt(0).toUpperCase()+spl[i].slice(1));
+                }
+
+                document.write(newstr.join(' '));
+            }
+
+
+            uppercase();
+        </script>
+    </body>
+</html>
